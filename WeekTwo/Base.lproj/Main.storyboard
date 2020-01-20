@@ -15,29 +15,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rko-R3-Zg0">
-                                <rect key="frame" x="0.0" y="90" width="320" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rockwell-BoldItalic" family="Rockwell" pointSize="28"/>
-                                <color key="textColor" red="0.92538958790000003" green="0.92554813619999998" blue="0.92537957429999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyd-g8-ceo">
-                                <rect key="frame" x="108" y="172" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Show Message">
-                                    <color key="titleColor" red="0.92538958790000003" green="0.92554813619999998" blue="0.92537957429999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="showMessageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KZ9-4V-ZUs"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1V-6r-jwV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyd-g8-ceo">
+                                        <rect key="frame" x="108" y="120" width="104" height="30"/>
+                                        <state key="normal" title="Show Message">
+                                            <color key="titleColor" red="0.92538958790000003" green="0.92554813619999998" blue="0.92537957429999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showMessageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sam-jB-2uP"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="IgR-H0-In4">
+                                        <rect key="frame" x="16" y="158" width="288" height="390"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rko-R3-Zg0">
+                                        <rect key="frame" x="16" y="20" width="288" height="112"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="112" id="mR6-FH-kkr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rockwell-BoldItalic" family="Rockwell" pointSize="28"/>
+                                        <color key="textColor" red="0.92538958790000003" green="0.92554813619999998" blue="0.92537957429999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rko-R3-Zg0" secondAttribute="trailing" constant="16" id="BjL-eD-1WU"/>
+                                    <constraint firstItem="IgR-H0-In4" firstAttribute="leading" secondItem="M1V-6r-jwV" secondAttribute="leading" constant="16" id="JX4-wI-ZOf"/>
+                                    <constraint firstItem="IgR-H0-In4" firstAttribute="top" secondItem="hyd-g8-ceo" secondAttribute="bottom" constant="8" id="LyH-8B-qVW"/>
+                                    <constraint firstAttribute="bottom" secondItem="IgR-H0-In4" secondAttribute="bottom" constant="20" id="Nco-3N-o2y"/>
+                                    <constraint firstItem="hyd-g8-ceo" firstAttribute="centerX" secondItem="M1V-6r-jwV" secondAttribute="centerX" id="Pv5-Mf-QR3"/>
+                                    <constraint firstItem="hyd-g8-ceo" firstAttribute="top" secondItem="M1V-6r-jwV" secondAttribute="top" constant="120" id="drA-fo-Bx5"/>
+                                    <constraint firstAttribute="trailing" secondItem="IgR-H0-In4" secondAttribute="trailing" constant="16" id="plG-hD-pDP"/>
+                                    <constraint firstItem="rko-R3-Zg0" firstAttribute="top" secondItem="M1V-6r-jwV" secondAttribute="top" constant="20" id="v6H-eL-gSz"/>
+                                    <constraint firstItem="rko-R3-Zg0" firstAttribute="leading" secondItem="M1V-6r-jwV" secondAttribute="leading" constant="16" id="xsu-3w-A73"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.51977640390000002" green="0.058218397200000001" blue="0.03869979456" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="M1V-6r-jwV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8f8-kW-q1p"/>
+                            <constraint firstItem="M1V-6r-jwV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QhA-2q-cTe"/>
+                            <constraint firstItem="M1V-6r-jwV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ube-Ug-gxC"/>
+                            <constraint firstItem="M1V-6r-jwV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vzY-RE-vzN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="messageLabel" destination="rko-R3-Zg0" id="44T-di-R5p"/>
+                        <outlet property="imageView" destination="IgR-H0-In4" id="Bmd-dY-Asc"/>
+                        <outlet property="messageLabel" destination="rko-R3-Zg0" id="Tde-tG-mE2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -45,4 +72,7 @@
             <point key="canvasLocation" x="138.75" y="109.85915492957747"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image0" width="475" height="633"/>
+    </resources>
 </document>

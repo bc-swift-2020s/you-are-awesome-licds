@@ -9,32 +9,92 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     @IBOutlet weak var messageLabel: UILabel!
-    var index = 0
+    @IBOutlet var imageView: UIImageView!
+    
+    var imageNumber = 0
+    var messageNumber = 0
+    let totalNumberOfImages = 9
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
+   
     @IBAction func showMessageButton(_ sender: UIButton) {
         let messages = ["You Are Awesome!",
                         "You Are Great!",
                         "You Are Fantastic!",
-                        "When the Genius Bar needs help, they call you",
                         "You brighten my day!",
                         "You are da bomb!",
                         "Hey, fabulous!",
                         "You are tremendous!",
                         "You've got the design skills of Jony Ive!",
-                        "I can't wait to download my app!"]
+                        "I can't wait to download my app!",
+                        "Fabulous? That's you!"]
         
-        var newIndex = -1
+        messageLabel.text = messages[Int.random(in: 0...messages.count-1)]
+        imageView.image = UIImage(named: "image\(Int.random(in: 0...totalNumberOfImages))")
         
-        repeat {
-            newIndex = Int.random(in: 0..<messages.count)
-        } while index == newIndex
-        index = newIndex
-        messageLabel.text = messages[index]
+//        messageLabel.text = messages[messageNumber]
+//        messageNumber += 1
+//        if messageNumber == messages.count {
+//            messageNumber = 0
+//        }
+//
+//        let imageName = "image\(imageNumber)"
+//        imageView.image = UIImage(named: imageName)
+//        imageNumber = imageNumber + 1
+//        if imageNumber == 10 {
+//            imageNumber = 0
+//        }
+    }
+//        print(imageNumber)
+//        let imageName = "image" + String(imageNumber)
+//        let imageName = "image\(imageNumber)"
+//        imageView.image = UIImage(named: imageName)
+//        imageNumber = imageNumber + 1
+//        if imageNumber == 10 {
+//            imageNumber = 0
+//        }
+//    }
+//
+//        let awesomeMessage = "You Are Awesome!"
+//        let greatMessage = "You Are Great!"
+//        let bombMessage = "You Are Da Bomb!"
+//
+//        if messageLabel.text == awesomeMessage {
+//            messageLabel.text = greatMessage
+//            imageView.image = UIImage(named: "image1")
+//        } else if messageLabel.text == greatMessage{
+//            messageLabel.text = bombMessage
+//            imageView.image = UIImage(named: "image2")
+//        } else {
+//            messageLabel.text = awesomeMessage
+//            imageView.image = UIImage(named: "image0")
+//        }
+//    }
+        
+//        messageLabel.text = "You Are Awesome!"
+//        imageView.image = UIImage(named: "image0")
+        
+//        let messages = ["You Are Awesome!",
+//                        "You Are Great!",
+//                        "You Are Fantastic!",
+//                        "When the Genius Bar needs help, they call you",
+//                        "You brighten my day!",
+//                        "You are da bomb!",
+//                        "Hey, fabulous!",
+//                        "You are tremendous!",
+//                        "You've got the design skills of Jony Ive!",
+//                        "I can't wait to download my app!"]
+//
+//        var newIndex = -1
+//
+//        repeat {
+//            newIndex = Int.random(in: 0..<messages.count)
+//        } while index == newIndex
+//        index = newIndex
+//        messageLabel.text = messages[index]
 //        messageLabel.text = messages.randomElement()!
 //        messageLabel.text = messages[index]
 //
@@ -54,6 +114,5 @@ class ViewController: UIViewController {
 //        } else {
 //            messageLabel.text = message1
 //        }
-    }
 }
 
