@@ -16,14 +16,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func showMessageButton(_ sender: UIButton) {
-        messageLabel.text = "You Are Awesome!"
-        messageLabel.textColor = UIColor.yellow
+        if messageLabel.text == "You Are Awesome!" {
+            messageLabel.text = "You Are Great!"
+        } else if messageLabel.text == "You Are Great!"{
+            messageLabel.text = "You Are Amazing!"
+        } else {
+            messageLabel.text = "You Are Awesome!"
+        }
     }
-    
-    @IBAction func showAnotherMessageButton(_ sender: UIButton) {
-        messageLabel.text = "You Are Great!"
-        messageLabel.textColor = UIColor.white
-    }
-    
 }
 
